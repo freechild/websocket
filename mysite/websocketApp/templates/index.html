@@ -1,0 +1,18 @@
+{% for poll in polls%}
+    {% for key, value in poll.items  %}
+    <tr>
+        {% if  key != 'data' %}
+            <td> {{ key }}: {{ value }} </td>
+            <br>
+        {% else %}
+        {% endif %}
+            {% for key2, value2 in value.items  %}
+                {% if  key2 != 'timestamp'%}
+                    <td> {{ key2 }}: {{ value2 }} </td>
+                    <br>
+                {% endif %}
+            {% endfor %}
+    </tr>
+    {% endfor %}
+    <hr>
+{% endfor %}

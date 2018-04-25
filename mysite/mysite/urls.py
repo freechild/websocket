@@ -20,6 +20,9 @@ urlpatterns = [
     # path('polls/', include('polls.urls')),
     path('admin/',admin.site.urls),
 
-    # define app data graph
-    path('app1/',include('data_graph.urls'))
+    # define app mongodb test
+    path('mongoapp/',include('mongoapp.urls')),
+
+
+    path('websocket/',include('websocketApp.urls')),
 ]
